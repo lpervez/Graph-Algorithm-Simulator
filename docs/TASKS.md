@@ -48,7 +48,7 @@ class WeissAbstractCollection {...}
 //This interface defines an algorithm that can be simulated with the GUI
 interface ThreeTenAlg {...}
 
-//You will be writing this algorithm (Dijkstra's shortest path)
+//You will be writing this algorithm (Prim's Minimum Spanning Tree)
 class ThreeTenPrim implements ThreeTenAlg {...}
 
 //This is the simulator and handles all the graphical stuff, it is provided.

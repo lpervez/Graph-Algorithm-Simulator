@@ -61,9 +61,9 @@ Image|Explanation
 :---: | :---:
 
 ### Example 4
-Running Dijkstra's in the simulator
+Running Prim's in the simulator
 
-You can try out Dijkstra's algorithm one step at a time to help debugging your code.
+You can try out Prim's algorithm one step at a time to help debugging your code.
 
 Image|Explanation
 :---: | :---:
