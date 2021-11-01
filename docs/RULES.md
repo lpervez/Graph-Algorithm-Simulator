@@ -5,7 +5,7 @@
 1. Fill out readme.txt (**NOT README.md**, which is the documentation for this website) with your information (goes in your user folder)
 2. Have a style (indentation, good variable names, etc.)
 3. Comment your code well in JavaDoc style (no need to overdo it, just do it well)
-4. Have code that compiles with the command: `javac -cp .;310libs.jar *.java` (Windows) or `javac -cp .:310libs.jar *.java` (Linux/MacOS) in your user directory
+4. Have code that compiles with the command: `javac -cp .;../310libs.jar *.java` (Windows) or `javac -cp .:../310libs.jar *.java` (Linux/MacOS) in your user directory
 
 ### You may:
 1. Add any additional private helper methods or instance variables to existing classes (except ThreeTenGraph, which may not have additional instance variables).
