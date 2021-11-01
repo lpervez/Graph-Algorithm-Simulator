@@ -1,1 +1,0 @@
-pandoc -t HTML README.md TASKS.md EXAMPLES.md RULES.md GRADING.md -s -o out.html
