@@ -21,7 +21,7 @@ Read and familiarize yourself with the code. This will save you a lot of time la
 
 //This class is the parent class of all graph components.
 //It is provided and should not be altered.
-class GraphEdge {...}
+class GraphComp {...}
 
 //This class represents a node in a graph.
 //It is provided and should not be altered.
