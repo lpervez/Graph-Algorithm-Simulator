@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
- *  Simulation of Prim's shortest path algorithm.
+ *  Simulation of Prim's minimum spanning tree algorithm.
  *  
  *  @author Katherine (Raven) Russell
  */
@@ -26,7 +26,7 @@ class ThreeTenPrim implements ThreeTenAlg {
 		GraphNode graphNode = null;
 		
 		/**
-		 *  The parent of the node (indicates the shortest path trail).
+		 *  The parent of the node (indicates the spanning tree).
 		 */
 		GraphNode parent = null;
 		
@@ -88,12 +88,12 @@ class ThreeTenPrim implements ThreeTenAlg {
 	public static final Color COLOR_DONE_NODE = Color.GREEN;
 	
 	/**
-	 *  The color when an edge is done AND in use for a shortest path.
+	 *  The color when an edge is done AND in use for the spanning tree.
 	 */
 	public static final Color COLOR_DONE_EDGE_1 = Color.GREEN.darker();
 	
 	/**
-	 *  The color when an edge is done AND NOT in use for a shortest path.
+	 *  The color when an edge is done AND NOT in use for the spanning tree.
 	 */
 	public static final Color COLOR_DONE_EDGE_2 = Color.LIGHT_GRAY;
 	
@@ -144,7 +144,7 @@ class ThreeTenPrim implements ThreeTenAlg {
 	
 	/**
 	 *  Gets the next minimum id node from the available nodes. This
-	 *  is chosen as the starting spot for the shortest path algorithm.
+	 *  is chosen as the starting spot for the spanning tree algorithm.
 	 *  
 	 *  @return the node with the minimum id
 	 */
