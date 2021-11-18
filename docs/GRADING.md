@@ -2,7 +2,7 @@
 [back](README.md)
 
 ### No Credit
-- Same as previous projects! (Non submitted assignments. Assignments submitted more than 48 hours late. Non-compiling assignments. Non-independent work. Code that violates and restrictions or “you may not” mandates. "Hard coded" solutions. Code that would win an obfuscated code competition with the rest of CS310 students.)
+- Same as previous projects! (Non submitted assignments. Assignments submitted more than 24 hours late. Non-compiling assignments. Non-independent work. Code that violates and restrictions or “you may not” mandates. "Hard coded" solutions. Code that would win an obfuscated code competition with the rest of CS310 students.)
 
 ### How will my assignment be graded?
 - Grading will be divided into two portions:
