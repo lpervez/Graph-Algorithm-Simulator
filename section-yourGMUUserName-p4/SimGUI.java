@@ -356,7 +356,7 @@ class SimGUI {
 					ThreeTenGraph.<GraphNode,GraphEdge>getFactory(),
 					nodeFactory, edgeFactory,
 					this.numNodes,this.prob
-				);
+			);
 			gen.setSeed(this.rand.nextInt());
 			graph = gen.create();
 		}
@@ -366,7 +366,9 @@ class SimGUI {
 	 *  Load a new simulation.
 	 */
 	public void resetAlg() {
-		if(alg == null) alg = new ThreeTenPrim();
+		if(alg == null) {
+			alg = new ThreeTenPrim();
+		}
 		
 		genGraph();
 		alg.reset(graph);

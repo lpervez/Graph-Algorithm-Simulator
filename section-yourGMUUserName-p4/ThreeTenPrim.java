@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
- *  Simulation of Prim's minimum spanning tree algorithm.
+ *  Simulation of Prim's shortest path algorithm.
  *  
  *  @author Katherine (Raven) Russell
  */
@@ -26,7 +26,7 @@ class ThreeTenPrim implements ThreeTenAlg {
 		GraphNode graphNode = null;
 		
 		/**
-		 *  The parent of the node (indicates the spanning tree).
+		 *  The parent of the node (indicates the shortest path trail).
 		 */
 		GraphNode parent = null;
 		
@@ -88,12 +88,12 @@ class ThreeTenPrim implements ThreeTenAlg {
 	public static final Color COLOR_DONE_NODE = Color.GREEN;
 	
 	/**
-	 *  The color when an edge is done AND in use for the spanning tree.
+	 *  The color when an edge is done AND in use for a shortest path.
 	 */
 	public static final Color COLOR_DONE_EDGE_1 = Color.GREEN.darker();
 	
 	/**
-	 *  The color when an edge is done AND NOT in use for the spanning tree.
+	 *  The color when an edge is done AND NOT in use for a shortest path.
 	 */
 	public static final Color COLOR_DONE_EDGE_2 = Color.LIGHT_GRAY;
 	
@@ -144,7 +144,7 @@ class ThreeTenPrim implements ThreeTenAlg {
 	
 	/**
 	 *  Gets the next minimum id node from the available nodes. This
-	 *  is chosen as the starting spot for the spanning tree algorithm.
+	 *  is chosen as the starting spot for the shortest path algorithm.
 	 *  
 	 *  @return the node with the minimum id
 	 */
@@ -157,6 +157,15 @@ class ThreeTenPrim implements ThreeTenAlg {
 		//using the graph editor.
 		
 		//YOUR_CODE_HERE
+		for (GraphNode vertex: graph.getVertices()) {
+			if (minIdNode == null) {
+				minIdNode = vertex;
+			}
+
+			if (minIdNode.getId() > vertex.getId()) {
+				minIdNode = vertex;
+			}
+		}
 		
 		return minIdNode;
 	}
@@ -193,6 +202,9 @@ class ThreeTenPrim implements ThreeTenAlg {
 			//if the vertex is the minimum ID node, set
 			//it's cost (in it's wrapper class) appropriately
 			//for the cost of the starting node in Prim's algorithm
+			if (v == minIdNode) {
+				n.cost = 0;
+			}
 			
 			graphNodesToAlgNodes.put(v,n);
 			queue.add(n);
@@ -294,7 +306,7 @@ class ThreeTenPrim implements ThreeTenAlg {
 		//replace the following line of code so that the current min
 		//is set to the next thing from the queue (removing it from
 		//the queue);
-		NodeForAlg currMin = null;
+		NodeForAlg currMin = queue.remove();
 		
 		//set color of next node and path to it (if not first node)
 		currMin.graphNode.setColor(COLOR_ACTIVE_NODE_1);
@@ -334,7 +346,7 @@ class ThreeTenPrim implements ThreeTenAlg {
 			//will be set appropriately for Prim's algorithm. (Note: you may want
 			//to read the code around this location to determine the value that
 			//goes here.)
-			int newCost = -1;
+			int newCost = e.getWeight();
 			
 			if(!algNode.done && newCost < algNode.cost) {
 				
